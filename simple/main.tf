@@ -6,8 +6,8 @@ provider "google" {
 	credentials = "${file("${var.account_file_path}")}"
 }
 
-resource "google_compute_instance" "frontend" {
-	name         = "frontend"
+resource "google_compute_instance" "guestbook" {
+	name         = "guestbook"
 	machine_type = "g1-small"
 	zone         = "${var.region_zone}"
 	
