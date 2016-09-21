@@ -19,15 +19,15 @@ terraform apply -var="project_name=myproject"
 terraform destroy -var="project_name=myproject"
 ```
 
-Pour la version avec enregistrement DNS, si on souhaite que notre application soit joignable via app.subdomain.mydomain.com on utilisera la commande terraform suivante:  
+Pour la version avec enregistrement DNS, si on souhaite que notre application soit joignable via "app.subdomain.foobar.com" on utilisera la commande terraform suivante:  
 
 ```bash
-terraform apply -var="project_name=myproject" -var="subdomain.domain.com." -var="record=app"
+terraform apply -var="project_name=myproject" -var="subdomain=subdomain.foobar.com." -var="record=app"
 
 ```
-L'output Terraform indiquera les NS à configurer dans la zone supérieure, mydomain.com dans notre exemple.
+L'output Terraform indiquera les NS à configurer dans la zone supérieure, foobar.com dans notre exemple.
 
 ## Ressources
 
 * https://github.com/hashicorp/terraform/
-*  https://www.terraform.io/
+* https://www.terraform.io/
