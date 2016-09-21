@@ -2,11 +2,10 @@
 
 resource "google_dns_managed_zone" "test" {
 	name        = "test-zone"
-	dns_name    = "${var.domain}"
+	dns_name    = "${var.subdomain}"
 }
 
-resource "google_dns_record_set" "guestbook" {
-	#name = "guestbook.${google_dns_managed_zone.test.dns_name}"
+resource "google_dns_record_set" "record" {
 	name = "${var.record}.${google_dns_managed_zone.test.dns_name}"
 	type = "A"
 	ttl  = 60

@@ -40,7 +40,7 @@ resource "google_compute_instance" "web" {
 	
 	provisioner "remote-exec" {
 		inline = [
-			"sudo /bin/bash /tmp/${var.install_path}/install-web.sh ${var.record}.${var.domain}",
+			"sudo /bin/bash /tmp/${var.install_path}/install-web.sh ${var.record}.${var.subdomain}",
 			"sudo rm -fr /tmp/${var.install_path}"
 		]
 	}

@@ -4,13 +4,9 @@ variable "project_name" {
 	description = "project name"
 }
 
-variable "domain" {
-   description = "your domain"
+variable "subdomain" {
+   description = "my_sub_domain"
 }
-
-#variable "sub_domain" {
-#   description = "my_sub_domain"
-#}
 
 variable "record" {
    description = "server name for your app"
