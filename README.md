@@ -10,7 +10,7 @@ Premiers pas avec Terraform et Google Cloud Platform.
 
 ## Utilisation
 
-```
+```bash
 ssh-keygen -f ~/.ssh/id_rsa_gcloud 	# sans passphrase
 mkdir -p ~/.gcloud/					# y déposer le fichier gcloud.json
 ...
