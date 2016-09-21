@@ -1,0 +1,21 @@
+# nginx minimal configuration for guestbook app 
+
+server {
+	listen 80 ;
+	index index.php ; 
+	server_name __SERVERNAME__;
+	root /opt/websites/guestbook/;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/var/run/php5-fpm.sock;
+	}
+
+	location /protected/ {
+                deny all;
+        }
+}
