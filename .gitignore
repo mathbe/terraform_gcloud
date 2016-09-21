@@ -2,3 +2,4 @@
 */*.tfstate*
 */*.json
 */*.log
+*/*.png

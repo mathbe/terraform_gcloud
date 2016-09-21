@@ -6,7 +6,7 @@ provider "google" {
 	credentials = "${file("${var.account_file_path}")}"
 }
 
-# Frontend web 
+# Web servers 
 resource "google_compute_instance" "web" {
 	count			= 2
 	name			= "web-${count.index}"

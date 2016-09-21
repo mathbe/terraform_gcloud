@@ -1,3 +1,5 @@
+# Terraform - loadbalance.tf
+
 resource "google_compute_target_http_proxy" "default" {
 	name        = "guestbook-proxy"
 	url_map     = "${google_compute_url_map.default.self_link}"
@@ -47,3 +49,4 @@ resource "google_compute_http_health_check" "web-check" {
 	timeout_sec = 1
 }
 
+# EOF
