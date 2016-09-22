@@ -7,6 +7,7 @@ Premiers pas avec Terraform et Google Cloud Platform.
 * Installer Terraform (https://www.terraform.io/downloads.html)
 * Créer un nouveau projet Google Cloud Platform
 * Récupérer le fichier d'authentification au format json (IAM & Administration -> Comptes de service -> Compute Engine default service account -> Créer une clé)
+* Si ce n'est déjà fait, activer l'api Google Cloud DNS
 
 ## Utilisation
 
